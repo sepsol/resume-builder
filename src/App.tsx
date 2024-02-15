@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import reactLogo from 'src/assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
-import * as stylex from '@stylexjs/stylex';
+import 'src/App.css'
+import * as stylex from '@stylexjs/stylex'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -37,6 +37,6 @@ const styles = stylex.create({
   red: {
     color: '#F00',
   },
-});
+})
 
 export default App
