@@ -30,6 +30,9 @@ const styles = stylex.create({
   }),
   red: {
     color: '#F00',
+    backgroundColor: {
+      ':hover': '#FFA',
+    },
   },
 })
 
