@@ -1,5 +1,6 @@
 {
   "name": "resume-builder",
+  "description": "Yet another resume builder, this time to mtach my taste.",
   "private": true,
   "version": "0.0.0",
   "type": "module",
