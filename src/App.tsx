@@ -1,9 +1,14 @@
 import { useState } from 'react'
 import * as stylex from '@stylexjs/stylex'
-import { resolveIconUrl as icon, resolveFontUrl } from 'src/utils'
+import { resolveIconUrl as icon } from 'src/utils'
+import WebFont from 'webfontloader';
 
 const font = 'Ubuntu'
-resolveFontUrl(font)
+WebFont.load({
+  google: {
+    families: [font],
+  },
+})
 
 function App() {
   const [count, setCount] = useState(0)
