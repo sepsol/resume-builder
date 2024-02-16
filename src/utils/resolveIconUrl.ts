@@ -10,6 +10,10 @@
  * <img src={resolveIconUrl('apple', 'red', 'ff0')} />
  * // Output: <img src="https://cdn.simpleicons.org/apple/red/ff0" />
  * ```
+ * 
+ * ---
+ * 
+ * [GitHub](https://github.com/simple-icons/simple-icons) | [NPM](https://www.npmjs.com/package/simple-icons) | [Website](https://simpleicons.org/)
  */
 export const resolveIconUrl = (
   nameSlug: string,
