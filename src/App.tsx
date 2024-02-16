@@ -1,18 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import * as stylex from '@stylexjs/stylex'
 import { resolveIconUrl as icon } from 'src/utils'
-import WebFont from 'webfontloader';
+import { useWebFont } from 'src/hooks'
 
 function App({ font = 'Ubuntu' }) {
   const [count, setCount] = useState(0)
 
-  useEffect(() => {
-    WebFont.load({
-      google: {
-        families: [font],
-      },
-    })
-  }, [font])
+  useWebFont({ google: { families: [font] } })
 
   return (
     <>
