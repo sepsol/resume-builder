@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import * as stylex from '@stylexjs/stylex'
-import { resolveIconUrl as icon } from 'src/utils/resolveIconUrl'
+import { resolveIconUrl as icon } from 'src/utils'
 
 function App() {
   const [count, setCount] = useState(0)
