@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import * as stylex from '@stylexjs/stylex'
-import { resolveIconUrl as icon } from 'src/utils'
+import { resolveIconUrl as icon, resolveFontUrl } from 'src/utils'
+
+const font = 'Ubuntu'
+resolveFontUrl(font)
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,6 +27,7 @@ function App() {
 const styles = stylex.create({
   red: {
     color: '#F00',
+    fontFamily: font
   },
 })
 
