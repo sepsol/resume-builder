@@ -7,8 +7,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "serve": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "serve": "vite preview"
+    "format:check": "prettier . --check",
+    "format": "prettier . --write"
   },
   "dependencies": {
     "@stylexjs/stylex": "^0.5.1",

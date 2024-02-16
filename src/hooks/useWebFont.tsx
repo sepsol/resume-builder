@@ -1,5 +1,5 @@
-import { useEffect } from "react"
-import WebFont from "webfontloader"
+import { useEffect } from 'react'
+import WebFont from 'webfontloader'
 
 export function useWebFont(config: WebFont.Config) {
   useEffect(() => {
