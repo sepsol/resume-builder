@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import * as stylex from '@stylexjs/stylex'
+import { resolveIconUrl as icon } from 'src/utils/resolveIconUrl'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -7,7 +8,7 @@ function App() {
   return (
     <>
       <h1 {...stylex.props(styles.red)}>Vite + React</h1>
-      <div className="card">
+      <div>
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
@@ -15,6 +16,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
+      <img width={32} height={32} src={icon('apple', 'grey')} />
     </>
   )
 }
