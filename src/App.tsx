@@ -1,21 +1,22 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import * as stylex from '@stylexjs/stylex'
 import { resolveIconUrl as icon } from 'src/utils'
 import WebFont from 'webfontloader';
 
-const font = 'Ubuntu'
-WebFont.load({
-  google: {
-    families: [font],
-  },
-})
-
-function App() {
+function App({ font = 'Ubuntu' }) {
   const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: [font],
+      },
+    })
+  }, [font])
 
   return (
     <>
-      <h1 {...stylex.props(styles.red)}>Vite + React</h1>
+      <h1 {...stylex.props(styles.red, styles.font(font))}>Vite + React</h1>
       <div>
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -30,9 +31,11 @@ function App() {
 }
 
 const styles = stylex.create({
+  font: (fontName: string) => ({
+    fontFamily: fontName,
+  }),
   red: {
     color: '#F00',
-    fontFamily: font
   },
 })
 
