@@ -20,6 +20,7 @@ function App({ font = 'Ubuntu' }) {
         </p>
       </div>
       <img width={32} height={32} src={icon('apple', 'grey')} />
+      <a href="https://google.com/">Google</a>
     </>
   )
 }
