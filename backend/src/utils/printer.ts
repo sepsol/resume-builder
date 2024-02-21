@@ -4,6 +4,7 @@ export const printPage = async (
   url: string = 'http://localhost:5173/',
   config?: { browser?: Browser; options?: PDFOptions },
 ) => {
+  console.time('Print');
   try {
     const browser = config?.browser
       ? await puppeteer.connect({ browserWSEndpoint: config.browser.wsEndpoint() })
@@ -25,5 +26,7 @@ export const printPage = async (
     else await browser.close();
   } catch (error) {
     console.error(error);
+  } finally {
+    console.timeEnd('Print');
   }
 };
