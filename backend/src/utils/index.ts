@@ -1,1 +1,2 @@
-export const number = 666;
+export * from './browser';
+export * from './printer';

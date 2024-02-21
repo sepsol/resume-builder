@@ -1,11 +1,12 @@
 import express from 'express';
-import { number } from 'src/utils';
+import { startBrowser } from 'src/utils';
 
 const app = express();
 const port = 4000;
+const browser = await startBrowser();
 
 app.get('/', (req, res) => {
-  res.send(`Hello, ${number}!`);
+  res.send(`Hello, world!`);
 });
 
 app.listen(port, () => {

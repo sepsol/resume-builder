@@ -3,12 +3,12 @@
   "description": "Backend for my resume builder.",
   "private": true,
   "version": "1.0.0",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "prepare": "ts-patch install -s",
-    "dev": "ts-node-dev --respawn --watch src --require tsconfig-paths/register --transpile-only src/index.ts",
+    "dev": "tsx watch src/index.ts",
     "build": "tsc",
-    "serve": "node -r tsconfig-paths dist/index.js",
+    "serve": "node dist/index.js",
     "start": "npm run build && npm run serve",
     "lint": "eslint . --ext .ts",
     "format:check": "prettier . --check",
@@ -22,13 +22,14 @@
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "3.2.5",
-    "ts-node-dev": "^2.0.0",
     "ts-patch": "^3.1.2",
     "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.7.1",
     "typescript": "^5.3.3",
     "typescript-transform-paths": "^3.4.7"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "puppeteer": "^22.1.0"
   }
 }
