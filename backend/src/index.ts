@@ -1,5 +1,5 @@
 import express from 'express';
-import { startBrowser } from 'src/utils';
+import { startBrowser } from 'src/utils/index.js';
 
 const app = express();
 const port = 4000;

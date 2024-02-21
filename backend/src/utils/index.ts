@@ -1,2 +1,2 @@
-export * from './browser';
-export * from './printer';
+export * from './browser.js';
+export * from './printer.js';
