@@ -6,7 +6,7 @@ export const printPage = async (
 ) => {
   try {
     const browser = config?.browser
-      ? await puppeteer.connect({ browserURL: config.browser.wsEndpoint() })
+      ? await puppeteer.connect({ browserWSEndpoint: config.browser.wsEndpoint() })
       : await puppeteer.launch({ headless: true });
 
     const page = await browser.newPage();
